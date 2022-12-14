@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   get '/users/:user_id/movies/:movie_id/viewing_parties/new', to: 'viewing_parties#new'
   post '/users/:user_id/movies/:movie_id/viewing_parties', to: 'viewing_parties#create'
   resources :users, only: :show
+
+
+
+  delete '/logout', to: 'users#delete'
 end
